@@ -122,5 +122,6 @@
         setInterval(updateTime, 1000);
         updateTime();
         updateDate();
+        // 
     </script>
 @endsection
