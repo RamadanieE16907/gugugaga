@@ -28,6 +28,7 @@
             transition: all 0.2s;
         }
         .btn-primary { background-color: #007bff; color: #fff; }
+        .btn-danger { background-color: #dc3545; color: #fff; }
         .btn:hover {
             box-shadow: 2px 2px 0 #666;
             transform: translate(3px, 3px);
@@ -50,6 +51,7 @@
                     <th>Nama Tugas</th>
                     <th>Status</th>
                     <th>Tanggal & Waktu Tugas</th>
+                    <th>Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -65,6 +67,13 @@
                             @endif
                         </td>
                         <td>{{ \Carbon\Carbon::parse($todolist->created_at)->translatedFormat('l, d F Y H:i:s') }} WIB</td>
+                        <td>
+                            <form action="{{ route('todolist.destroy', $todolist->id) }}" method="POST" onsubmit="return confirm('Apakah Anda yakin ingin menghapus tugas ini?');">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger">Hapus</button>
+                            </form>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
