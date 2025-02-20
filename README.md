@@ -97,7 +97,5 @@ Terima kasih telah menggunakan **To-Do List App** ini! 🙌
 
 ---
 
-## 🐝 Dibuat oleh
 
-Aplikasi ini dibuat dengan ❤️ oleh **Wahyu Rahmat Hidayat**. Bebas digunakan untuk keperluan pribadi maupun edukasi. 🚀
 
